@@ -1,8 +1,5 @@
-// const http = require("http");
-
-import http from "http";
-import exportRoutes from "./routes.js";
-// const exportedRoutes = require("./routes");
+const http = require("http");
+const exportedRoutes = require("./routes");
 //if the path has "/" or "./" ,
 // node will look for locally to the file path
 
@@ -11,6 +8,6 @@ import exportRoutes from "./routes.js";
 // 2 anynonemous function
 // 3 arrow function
 
-const server = http.createServer(exportRoutes);
+const server = http.createServer(exportedRoutes);
 
 server.listen(3000);
