@@ -5,6 +5,7 @@ const server = http.createServer((req, res) => {
   const method = req.method;
   const users = [];
   // every time when the new request hits , this users list will be new and empty
+  // so you can not iterate over the users array in /users route
 
   if (url === "/" && method === "GET") {
     const homePageContent = `
@@ -45,9 +46,6 @@ const server = http.createServer((req, res) => {
 
     res.setHeader("Content-Type", "text/html");
     res.write(userList);
-
-    // res.statusCode = 302;
-    // res.setHeader("Location", "/");
     return res.end();
   }
 
