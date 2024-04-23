@@ -1,4 +1,6 @@
-const fs = require("fs");
+// const fs = require("fs");
+
+import fs from "fs";
 
 function requestHandler(req, res) {
   const url = req.url;
@@ -73,7 +75,7 @@ function requestHandler(req, res) {
 }
 
 //method 1
-module.exports = requestHandler;
+// module.exports = requestHandler;
 
 // method 2
 // module.exports = {
@@ -89,3 +91,5 @@ module.exports = requestHandler;
 
 // exports.handler = requestHandler;
 // exports.someKey = "Some Hard Coded Key";
+
+export default requestHandler;
