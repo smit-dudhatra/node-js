@@ -1,0 +1,5 @@
+start is a special script that do not needs `run` keyword
+just use npm start
+and for other scripts
+use
+npm run `script-name`
