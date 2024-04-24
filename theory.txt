@@ -3,3 +3,34 @@ just use npm start
 and for other scripts
 use
 npm run `script-name`
+
+for local dependencies use 
+npm i --save-dev
+
+for global package
+npm i -g
+
+for  production package
+npm i --save
+
+there are two types of usage for npm packages
+
+1 > development packages
+2 > production packages
+
+nodemon app.ju
+will thorow error
+because in terminal we can run only global packages
+and in npm scripts it will look for local packages
+so
+npm start for nodemon app.js will be okay
+
+for logical errors (in the case where we are not getting the expected result, and no error in
+the terminal)
+you can use debugger and breakpoints to stop the program execution at desired line and check
+the variable value by just hover over the variable....
+
+cultivate the habit of analyze the code with 
+debugger always in the development mode
+and read the theory slide daily
+
