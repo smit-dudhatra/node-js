@@ -1,0 +1,16 @@
+>> why middleware startements encountered 2 times on terminal (specifically two times) ?
+
+>> first is for actual url and second is for `favicon.ico`
+
+>> do some practicals regarding of how the different request urls would end up in which
+specific middleware ?
+ means can we guess the actual output or exact middleware where the response will be
+ got ?
+ and in that middleware 
+ what url will you encounter ?
+
+ ex: /add-product
+ in first middleware you will get >> /addd-product
+ and in response sending middleware you will get url == /
+
+ how and why this happened ?

@@ -35,7 +35,7 @@ function requestHandler(req, res) {
       const parsedBody = Buffer.concat(body).toString();
       const message = parsedBody.split("=")[1];
       fs.writeFile("message.txt", message, (error) => {
-        res.statusCode = 302;
+        res.statusCode = 302; // without return , page redirect will not work  , so for redirect status code is necessary
         res.setHeader("Location", "/");
         return res.end();
       });

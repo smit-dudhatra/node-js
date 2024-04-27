@@ -18,7 +18,7 @@ there are two types of usage for npm packages
 1 > development packages
 2 > production packages
 
-nodemon app.ju
+nodemon app.js
 will thorow error
 because in terminal we can run only global packages
 and in npm scripts it will look for local packages
