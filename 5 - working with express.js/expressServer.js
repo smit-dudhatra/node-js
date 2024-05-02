@@ -1,34 +1,29 @@
+// we will diffrentiate the import statements via 3 categories
+
+// 1 >> core modules
+// 2 >> third party modules
+// 3 >> manual imports
+
+const path = require("path");
+
 const express = require("express");
+
+const bodyParser = require("body-parser");
+
+const adminRoutes = require("./routes/admin");
+const shopUrls = require("./routes/shop");
+const rootPath = require("./util/rootPath");
 
 const app = express();
 
-app.use("/", (req, res, next) => {
-  // the url will be fully mathched to "/" , instead it will be matched with the path that
-  // starts with "/"
-  // so it will execute for "/" and "/add-product" both
-  // and hence it will be executed for all paths
-  // because all path will start from "/"
-  console.log(req.url);
-  console.log(req.originalUrl);
-  console.log("this always runs");
-  next();
-});
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(express.static(path.join(rootPath, "public")));
 
-app.use("/add-product", (req, res, next) => {
-  console.log(req.url);
-  console.log(req.originalUrl);
-  console.log("in the first middleware");
-  res.end("<h1>This is add product page</h1>");
-});
+app.use("/admin", adminRoutes); // now the all the routes in adminRoutes file will have the `prefix /admin` by default
+app.use(shopUrls);
 
 app.use((req, res, next) => {
-  console.log(req.url);
-  console.log(req.originalUrl);
-  console.log("in the next middleware");
-  res.send("<h1>This is the Server Created By Express</h1>");
-
-  //express middleware automatically set the content type based on the passed content
-  // you can check this via documentation
+  res.status(404).sendFile(path.join(rootPath, "views", "404.html")); // we can chain any method and any number of method before send method, here we have added status method before sending the response
 });
 
 app.listen(3000);

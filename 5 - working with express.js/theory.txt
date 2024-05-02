@@ -1,0 +1,6 @@
+expressJS is all about middleware
+
+middleware
+
+middleware is in the end a function that funnled a request or say process a request and
+either forward the request to the next middleware [next()] or send the response [res.send()]
