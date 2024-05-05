@@ -1,0 +1,14 @@
+ejs also built in available as pug
+so no need to register the engine >> app.engine
+
+only pug provides the support for blocks
+handlebars and ejs don't provide the direct support to blocks
+
+direct value mate <%= %>
+expression evalauation mate <% %>
+
+ejs has partials / includes concept where
+partials are the small parts of page and layout is the template where you inject your data
+or override the blocks
+<%- unescaped HTML code
+<%= to print direct value

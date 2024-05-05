@@ -1,0 +1,10 @@
+the engine name you are setting in the app.engine method will same as the template file
+extension
+
+as of now express-handlebars has the latest version of 7.1.2
+but for now we are using the version 3.0 for this course
+
+in handlebars you can't use logical statements 
+only true and false can be passed to the data object of res.render method 
+
+this ensures that the logical statements should only resides in the express code side

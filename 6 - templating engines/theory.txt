@@ -1,0 +1,27 @@
+you can install multiple packages at sime time
+
+like
+
+npm i pug ejs express-handlebars
+
+after npm5+ >> packages will be added to dependecies by default.
+
+app.set("views","/views") >> it has already a views as a default value , if you don't 
+mention this
+
+if you anything in the template file , no need to restart manually or nodemon will not
+restart itself , because templates are used on the fly
+and if you change something the changes will be reflected automatically in the next retart
+
+pug is the build in template engine
+so we don't need to require it manually
+
+handlebars is not the built in template engine
+so we need to require ut manually
+
+templating engine built in che k nai a tamne docs parthi khabar padshe ..
+
+the method with which you are passing the data to the template is almost same for all the
+template engines
+
+ex :- you are passing the object to the render method

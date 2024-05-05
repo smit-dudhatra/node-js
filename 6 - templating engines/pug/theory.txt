@@ -1,0 +1,5 @@
+theory for PUG template
+
+works on indentation concept > same as python
+
+if you don't mention any HTML tag it will be <div> tag by default ..
