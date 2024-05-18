@@ -3,4 +3,16 @@ expressJS is all about middleware
 middleware
 
 middleware is in the end a function that funnled a request or say process a request and
-either forward the request to the next middleware [next()] or send the response [res.send()]
+either forward the request to the next middleware [next()] or 
+send the response [res.send()]
+
+res.render will not stop execution , it will continue to next middleware in the stack
+where it founds (app.use) either in the flow or either in the controller folder or in the 
+express router way
+
+>> mainly for serviceworker.js and favicon
+
+
+
+
+

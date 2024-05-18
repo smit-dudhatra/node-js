@@ -1,0 +1,11 @@
+how event loop works
+    ex:- building scenario
+    where if 1,3,4 floor have the task
+    and 2,8 wants time taking tasks
+
+    first execute 1,3,4 tasks and move 2,8 to web apis and after completing 1,3,4
+    move 2,8 to queue and take that tasks to call stack and execute them
+
+debugger
+export functionality >> each and every variation
+this keyowrd >> in class and in the arrow function manner

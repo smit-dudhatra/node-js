@@ -25,3 +25,12 @@ the method with which you are passing the data to the template is almost same fo
 template engines
 
 ex :- you are passing the object to the render method
+
+at the end
+we will use ejs with the concept used in handlebars (keep logic in the js side and probably
+put the seperate function)
+
+when you set view engine
+you don't have to mention the file extension for template explicitly while rendering
+
+
