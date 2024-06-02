@@ -33,4 +33,13 @@ put the seperate function)
 when you set view engine
 you don't have to mention the file extension for template explicitly while rendering
 
+for EJS templating engine
+
+:- write JS code between <% ... %>
+:- write HTML code between %>...<% -- means outside of percent tags
+
+same with REACT
+
+write JS code {...}
+write HTML code }...{ >> means outside of curly braces
 

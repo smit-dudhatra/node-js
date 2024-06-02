@@ -1,0 +1,23 @@
+put more specific route upper side
+and the dynmic route will be at the bottom side
+ex
+
+products/delete >> put this first
+products/:id >> put this after products/delete 
+
+to pass a local variable to the include , pass the variable with object key used in include
+as a second parameter
+
+when you extract query param , it always be the type of string
+
+for path >> req.params.<name>
+for query >> req.query.<name>
+
+if you want to populate the value in the  input field use `value` prop and for textarea
+directly put a value between the opening and closing tag of textarea
+ex
+<textarea>put value here</textarea>
+
+
+
+

@@ -1,0 +1,32 @@
+<%- include('../includes/head.ejs') %>
+<%- include('../includes/navigation.ejs') %>
+    </head>
+
+    <% if (prods.products.length > 0){ %>
+        <table border="1">
+            <th>Product Id</th>
+            <th>Quantity</th>
+            <th>Delete</th>
+        <% prods.products.forEach((prod) => { %>
+
+            <tr>
+                <td><%= prod.id %></td>
+                <td><%= prod.qty %></td>
+                <td><a href="/delete-cart-item?productId=<%= prod.id %>">Delete</a></td>
+            </tr>
+
+     <%   }); 
+    %>
+            <tr>
+                <td>Total:-</td>
+                <td colspan="2"><%= prods.totalPrice %></td>
+            </tr>
+    <%
+    } else{ %>
+    </table>
+        <h1>No Cart Items</h1>
+    <% } %>
+    
+    <body>
+        
+        <%- include('../includes/end.ejs') %>

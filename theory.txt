@@ -34,3 +34,4 @@ cultivate the habit of analyze the code with
 debugger always in the development mode
 and read the theory slide daily
 
+how to read the node docs effectively ?
