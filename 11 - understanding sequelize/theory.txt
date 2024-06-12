@@ -1,0 +1,48 @@
+sequelize is ORM library - Object relation Mapping
+
+sequelize needs the mysql2 or we can say that
+sequelize has dependency on mysql2
+
+sequelize uses mysql2 behind the scenes
+
+instead of using findById, use findByPk
+
+the npm don't rin the middleware , the incoming requests invokes the middleware
+
+if possible 
+try to define 2-way relationship for all models
+like
+
+User.hasOne(Cart);
+and
+Cart.belongsTo(User);
+
+to get the advantage of all magic methods `get`,`set`,`create` etc..
+
+though the course creator says the inverse relation is optional , always have a good
+prctise and establish the inverse relationship as well..
+
+magic method types
+
+get >> to get the relation obejct
+set >> kind of sync method in spatie >> just sync with the last provided objects
+create >> with creating the data (only for 1:1 relation)
+add >> old data remains as it is and new data is added , won't affect the old data
+
+by implementing
+both side relations
+you can save data on either side
+
+like 
+
+you can save cartitem through
+
+cart.addProduct(product , {
+    through : quantity
+})
+
+
+product.addProduct(cart,{through : quantity});
+
+both will work
+ 
